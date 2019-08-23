@@ -4,14 +4,14 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
-		<title>React Workshop</title>
 		<script src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
 		<script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
 		<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+		<title>Document</title>
 	</head>
-
 	<body>
 		<div id="root"></div>
+
 		<script type="text/babel">
 			const TodoList = props => {
 				return (
@@ -20,9 +20,9 @@
 						<ul>
 							{props.list.map((item, index) => (
 								<li key={`${item.task}-${index}`}>
-									<span>{item.task}</span>
+									<span>{item.task} </span>
 									<button onClick={() => props.onRemoveItem(item.task)}>Remove</button>
-									<button onClick={() => props.onToggleCompleted(item.task)}>Mark as Complete</button>
+									<button onClick={() => props.onToggleCompleted(item.task)}>Complete</button>
 								</li>
 							))}
 						</ul>
@@ -37,8 +37,8 @@
 						<ul>
 							{props.list.map((item, index) => (
 								<li key={`${item.task}-${index}`}>
-									<span>{item.task}</span>
-									<button onClick={() => props.onToggleCompleted(item.task)}>Mark as Incomplete</button>
+									<span>{item.task} </span>
+									<button onClick={() => props.onToggleCompleted(item.task)}>Mark Incomplete</button>
 								</li>
 							))}
 						</ul>
@@ -54,18 +54,18 @@
 						todos: [
 							{
 								task: 'eat',
-								complete: false,
+								completed: true,
 							},
 							{
 								task: 'sleep',
-								complete: false,
+								completed: false,
 							},
 							{
 								task: 'code',
-								complete: false,
+								completed: false,
 							},
 						],
-						input: undefined,
+						input: '',
 					};
 				}
 
@@ -85,7 +85,7 @@
 								completed: false,
 							},
 						]),
-						input: undefined,
+						input: '',
 					}));
 				};
 
@@ -96,12 +96,11 @@
 				handleToggleCompleted = task => {
 					this.setState(prevState => {
 						const todo = prevState.todos.find(todo => todo.task === task);
-
 						return {
 							todos: prevState.todos.map(todo =>
 								todo.task === task ? { ...todo, completed: !todo.completed } : todo
-							)
-						}
+							),
+						};
 					});
 				};
 
@@ -112,14 +111,18 @@
 								type={'text'}
 								placeholder={'new item'}
 								value={this.state.input}
-								onChange={event => this.updateInput(event.target.value)} />
-							<button onClick={this.handleAddTodo}>Submit</button
-							<TodoList list={this.state.todos.filter(item => item.completed === false)}
+								onChange={event => this.updateInput(event.target.value)}
+							/>
+							<button onClick={this.handleAddTodo}>Submit</button>
+							<TodoList
+								list={this.state.todos.filter(item => item.completed === false)}
 								onRemoveItem={this.handleRemoveTodo}
-								onToggleCompleted={this.handleToggleCompleted} />
+								onToggleCompleted={this.handleToggleCompleted}
+							/>
 							<CompletedList
 								list={this.state.todos.filter(item => item.completed === true)}
-								onToggleCompleted={this.handleToggleCompleted} />
+								onToggleCompleted={this.handleToggleCompleted}
+							/>
 						</div>
 					);
 				}
