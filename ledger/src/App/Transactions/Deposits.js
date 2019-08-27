@@ -1,7 +1,6 @@
 import React from 'react';
+import Card from '../../Common/Card/Card';
 
-const Deposits = props => {
-	return <div className='transactions-box'>Deposits</div>;
-};
+const Deposits = props => <Card className='transactions-box'>Debits</Card>;
 
 export default Deposits;
