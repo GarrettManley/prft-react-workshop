@@ -1,0 +1,9 @@
+.transactions-container {
+	display: flex;
+	justify-content: space-around;
+}
+
+.transactions-box {
+	width: 33vw;
+	padding: 1rem;
+}
