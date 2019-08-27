@@ -5,6 +5,6 @@ export default class Debits extends React.Component {
 	title = 'Debits';
 
 	render() {
-		return <Transaction title={this.title} />;
+		return <Transaction isDebit={true} />;
 	}
 }
