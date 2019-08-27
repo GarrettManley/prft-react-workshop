@@ -4,6 +4,6 @@ import './Card.scss';
 
 export default class Card extends React.Component {
 	render() {
-		return <div className='card'>{this.props.children}</div>;
+		return <div className={`card ${this.props.className}`}>{this.props.children}</div>;
 	}
 }
