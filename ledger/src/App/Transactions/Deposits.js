@@ -1,6 +1,10 @@
 import React from 'react';
-import Card from '../../Common/Components/Card/Card';
+import Transaction from '../../Common/Components/Transaction/transaction';
 
-const Deposits = props => <Card className={'transactions-box'}>Deposits</Card>;
+export default class Deposits extends React.Component {
+	title = 'Deposits';
 
-export default Deposits;
+	render() {
+		return <Transaction title={this.title} />;
+	}
+}
