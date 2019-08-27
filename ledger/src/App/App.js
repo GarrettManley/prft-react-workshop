@@ -1,6 +1,6 @@
 import React from 'react';
 import Transactions from './Transactions';
-import './App.css';
+import './App.scss';
 
 function App() {
 	return (

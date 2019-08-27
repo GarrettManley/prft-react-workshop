@@ -1,7 +1,7 @@
 import React from 'react';
 import Deposits from './Deposits';
 import Debits from './Debits';
-import './styles.css';
+import './styles.scss';
 
 const Transactions = props => {
 	return (
