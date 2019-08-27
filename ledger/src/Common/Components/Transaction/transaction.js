@@ -8,6 +8,10 @@ export default class Transaction extends React.Component {
 		return (
 			<Card className='transactions-box'>
 				<h2>{this.props.title}</h2>
+				<div className='input-group'>
+					<p>Check Number:</p>
+					<input />
+				</div>
 			</Card>
 		);
 	}

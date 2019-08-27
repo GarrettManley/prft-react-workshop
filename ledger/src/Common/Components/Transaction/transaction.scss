@@ -1,6 +1,18 @@
 .transactions-box {
-	h2 {
+	background: white;
+	width: 33vw;
+	padding: 1rem;
+
+	h2 {}
+
+	.input-group {
 		display: flex;
-		justify-self: center;
+		justify-content: space-between;
+
+		p {
+			margin: 0;
+		}
+
+		input {}
 	}
 }
