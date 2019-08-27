@@ -1,0 +1,18 @@
+.input-group {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	margin: 1rem 0;
+
+	p {
+		margin: 0;
+	}
+
+	input {
+		background: #eee;
+		border: 1px solid;
+		border-radius: 1rem;
+		text-align: right;
+		padding: 0.25rem 0.5rem;
+	}
+}
