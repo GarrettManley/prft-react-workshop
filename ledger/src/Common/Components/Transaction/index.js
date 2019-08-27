@@ -1,8 +1,8 @@
 import React from 'react';
-import Card from '../Card/card';
-
-import './transaction.scss';
+import Card from '../Card';
 import LabeledInput from '../LabeledInput';
+
+import './styles.scss';
 
 export default class Transaction extends React.Component {
 	render() {
