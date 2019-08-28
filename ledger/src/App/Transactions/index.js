@@ -1,13 +1,12 @@
 import React from 'react';
-import Deposits from './Deposits';
-import Debits from './Debits';
 import './styles.scss';
+import Transaction from '../../Common/Components/Transaction';
 
 const Transactions = props => {
 	return (
 		<div className='transactions-container'>
-			<Deposits />
-			<Debits />
+			<Transaction isDebit={true} />
+			<Transaction isDebit={false} />
 		</div>
 	);
 };
