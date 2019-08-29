@@ -1,5 +1,8 @@
+@import '../../../Styles/mixins';
+
 .card {
-	border: 1px solid;
-	border-radius: 1rem;
+	border-radius: 0.25rem;
 	padding: 1rem;
+
+	@include shadow;
 }
