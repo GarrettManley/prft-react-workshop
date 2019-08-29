@@ -1,5 +1,7 @@
 .transactions-container {
 	display: flex;
-	justify-content: space-around;
-	margin: 1rem -1rem;
+	justify-content: space-between;
+	flex-wrap: wrap;
+
+	margin: 1rem 0;
 }

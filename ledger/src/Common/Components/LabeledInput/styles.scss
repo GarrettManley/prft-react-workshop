@@ -8,7 +8,6 @@
 
 	p {
 		margin: 0;
-		text-shadow: $shadow-text;
 	}
 
 	input {
@@ -18,6 +17,5 @@
 		text-align: center;
 		padding: 0.25rem 0.5rem;
 		@include shadow(true);
-		text-shadow: $shadow-text;
 	}
 }

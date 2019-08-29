@@ -3,6 +3,8 @@
 .card {
 	border-radius: 0.125rem;
 	padding: 1rem;
+	width: 100%;
+	background: white;
 
 	@include shadow;
 }

@@ -5,10 +5,6 @@ import './styles.scss';
 
 export default class Ledger extends React.Component {
 	render() {
-		return (
-			<div className='ledger'>
-				<Card>Test</Card>
-			</div>
-		);
+		return <Card className={'ledger'}>Test</Card>;
 	}
 }
