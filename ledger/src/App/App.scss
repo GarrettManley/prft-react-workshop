@@ -1,3 +1,4 @@
+@import '../Styles/colors';
 @import '../Styles/mixins';
 
 .App {
@@ -5,8 +6,8 @@
 }
 
 .header {
-  color: #CC1F20;
-  background: black;
+  color: lighten($color: $color-primary, $amount: 50);
+  background: darken($color: $color-primary, $amount: 10);
   @include shadow;
 
   h1 {
