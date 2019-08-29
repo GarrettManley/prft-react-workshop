@@ -20,4 +20,10 @@ code {
 
 button {
   cursor: pointer;
+  padding: 0.25rem 1rem;
+
+  &:hover {
+    @include shadow;
+    transform: scale(1.1);
+  }
 }
