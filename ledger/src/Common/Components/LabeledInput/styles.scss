@@ -1,3 +1,5 @@
+@import '../../../Styles/mixins';
+
 .input-group {
 	display: flex;
 	justify-content: space-between;
@@ -6,13 +8,16 @@
 
 	p {
 		margin: 0;
+		text-shadow: $shadow-text;
 	}
 
 	input {
 		background: #eee;
-		border: 1px solid;
-		border-radius: 1rem;
-		text-align: right;
+		border: none;
+		border-radius: 0.125rem;
+		text-align: center;
 		padding: 0.25rem 0.5rem;
+		@include shadow(true);
+		text-shadow: $shadow-text;
 	}
 }

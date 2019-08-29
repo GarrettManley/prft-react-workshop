@@ -1,3 +1,10 @@
-@mixin shadow {
-	box-shadow: 0.125rem 0.1rem 0.25rem rgba(0, 0, 0, 0.6)
+$shadow: 0.125rem 0.1rem 0.25rem rgba(0, 0, 0, 0.6);
+$shadow-text: 0.05rem 0.05rem 0.1rem rgba(0, 0, 0, 0.6);
+
+@mixin shadow($inset: false) {
+	box-shadow: $shadow;
+
+	@if ($inset==true) {
+		box-shadow: inset $shadow;
+	}
 }
