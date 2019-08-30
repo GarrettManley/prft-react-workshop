@@ -7,7 +7,7 @@ export default class Ledger extends React.Component {
 	render() {
 		return (
 			<Card className={'ledger'}>
-				test
+				<h2>Ledger</h2>
 				{this.props.transactions.map(transaction => (
 					<LedgerItem key={transaction.checkNumber} transaction={transaction} />
 				))}

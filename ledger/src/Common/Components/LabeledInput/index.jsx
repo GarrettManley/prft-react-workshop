@@ -6,7 +6,7 @@ export default class LabeledInput extends React.Component {
 		return (
 			<div className='input-group'>
 				<p>{this.props.labelText}:</p>
-				<input />
+				<input value={this.props.value} onChange={this.props.onChange} />
 			</div>
 		);
 	}
